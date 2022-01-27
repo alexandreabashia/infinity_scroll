@@ -9,7 +9,7 @@ body {
   text-align: center;
 
   margin: 0 auto;
-  max-width: 330px;
+  max-width: 1230px;
 }
 
 .loader {
@@ -21,8 +21,8 @@ body {
   margin-bottom: 5px;
   border: 2px solid black;
 
-  width: 400px;
-  height: 500px;
+  width: 1200px;
+  height: 100vh;
   overflow: auto;
 }
 
