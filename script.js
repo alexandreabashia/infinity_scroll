@@ -8,17 +8,32 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${accessKey}&c
 
 let photosArray = [];
 
+let pc = document.getElementById('loaded')
+
 // ASYNC AWAIT
 async function execApi() {
-    try {
         const response = await fetch(apiUrl)
         photosArray = await response.json();
-        console.log(photosArray)
-    } catch(e) {
-        console.log('Error fetching')
-    }
+        loadImages(photosArray)
 }
 
-execApi()
+function loadImages(photosArray) {
+    photosArray.forEach(element => {
+        var image = new Image();
+        image.src = element.urls.small;
+        document.getElementById('loaded').appendChild(image);
+    });
+}
+
+pc.addEventListener('scroll', function(){
+    if (pc.scrollTop + pc.clientHeight >= pc.scrollHeight) {
+        execApi();
+        console.log('whats up')
+      }
+})
+
+
+execApi();
+
 
 

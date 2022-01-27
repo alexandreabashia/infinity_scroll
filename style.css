@@ -7,8 +7,27 @@ body {
   margin: 15;
   min-height: 100vh;
   text-align: center;
+
+  margin: 0 auto;
+  max-width: 330px;
+}
+
+.loader {
+  font-size: 26px;
+}
+
+.loaded {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+
+  width: 400px;
+  height: 500px;
+  overflow: auto;
 }
 
 img {
-  max-width: 60px;
+  max-width: 300px;
+  border: 3px solid grey;
+  margin: 10px;
 }
